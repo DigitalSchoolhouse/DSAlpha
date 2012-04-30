@@ -1,3 +1,5 @@
 <h1><%= @post.title %></h1>
-asset url: <em><%= @post.asset_url %></em>
+<div>
+  <%= asset_embed(@post.asset_url) %>
+</div>
 <p><%= @post.description %></p>
