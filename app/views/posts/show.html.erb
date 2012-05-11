@@ -2,4 +2,7 @@
 <div>
   <%= asset_embed(@post.asset_url) %>
 </div>
+<div>
+  <%= image_tag @post.image.url if @post.image_uid.present? %>
+</div>
 <p><%= @post.description %></p>

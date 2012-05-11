@@ -2,6 +2,10 @@ DsAlpha::Application.routes.draw do
   
   resources :posts
   
+  match 'login' => 'sessions#login', as: :login
+  match 'sessions' => 'sessions#create'
+  match 'logout' => 'sessions#logout', as: :logout
+  
   root to: 'posts#index'
 
   # The priority is based upon order of creation:
