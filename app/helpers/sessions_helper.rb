@@ -1,5 +1,9 @@
 module SessionsHelper
   
+  # def is_admin?
+  #   current_user.admin.present?
+  # end    
+  
   def current_user
     @current_user ||= User.find_by_id(session[:user])
   end

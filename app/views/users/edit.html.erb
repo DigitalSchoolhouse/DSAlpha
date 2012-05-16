@@ -1,0 +1,10 @@
+<h1>Edit User</h1>
+<%= form_for @user do |user| %>
+  <%= user.label "Name" %>
+  <%= user.text_field :name %>
+  <%= user.label "Email" %>
+  <%= user.email_field :email required %>
+  <%= user.label "Password" %>
+  <%= user.password_field :password required %>
+  <%= user.password_field :password_confirmation %>
+<% end %>

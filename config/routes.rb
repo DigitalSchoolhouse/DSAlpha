@@ -1,6 +1,6 @@
 DsAlpha::Application.routes.draw do
   
-  resources :posts
+  resources :posts, :users
   
   match 'login' => 'sessions#login', as: :login
   match 'sessions' => 'sessions#create'

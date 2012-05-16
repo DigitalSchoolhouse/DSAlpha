@@ -1,0 +1,16 @@
+<h1>New User</h1>
+<%= form_for @user do |user| %>
+  <%= user.label "Name" %>
+  <%= user.text_field :name %>
+  <%= user.label "Email" %>
+  <%= user.email_field :email %>
+  <%= user.label "School" %>
+  <%= user.select :school, options_for_select(["Huy Ping May, Thailand", "Stonybrook, US"]) %>
+  <%= user.label "Admin" %>
+  <%= user.check_box :admin %>
+  <%= user.label "Password" %>
+  <%= user.password_field :password %>
+  <%= user.label "Password Confirmation" %>
+  <%= user.password_field :password_confirmation %>
+  <%= user.submit "Create User" %>
+<% end %>
